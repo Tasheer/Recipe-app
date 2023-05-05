@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,300&family=Mali:ital,wght@1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(233, 233, 233);
+    font-family: 'Poopins', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.mobile-container{
+    box-shadow: 0 0 10px 2px #3333331a;
+    width: 400px;
+}
+
+header{
+    
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header input{
+    border: none;
+    border-radius: 3px;
+    padding: 0.15rem 1rem;
+    background-color: rgb(208, 208, 208);
+}
+
+
+header button {
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+.fav-container{
+    background-color: rgb(238, 201, 255);
+    border-radius: 10px;
+    display: flex;
+    padding-right: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fav-meals{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    cursor: pointer;
+    list-style-type: none;
+
+}
+
+.fav-meals li {
+    position: relative;
+}
+
+
+.fav-meals li:hover .clear {
+    opacity: 1;
+}
+
+
+.fav-meals li:hover span {
+    white-space: normal;
+    overflow: auto;
+}
+.fav-meals li .clear{
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    border: none;
+    opacity: 0;
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+
+.fav-meals li img{
+    max-width: 80px;
+    max-height: 55px;
+    object-fit: cover;
+    border: 2px solid grey;
+    border-radius: 43px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.fav-meals li span{
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+
+
+
+h3{
+    text-align: center;
+}
+
+.meal{
+    box-shadow: 0 0 10px 2px #3333331a;
+}
+
+.meal-header{
+    position: relative;
+    top: 10px;
+    width: 100%;
+}
+
+.meal-header .random{
+    position: absolute;
+    background-color: rgb(250, 238, 255);
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 2px rgb(238, 162, 162);
+}
+
+.meal-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+h4{
+    margin-right: 80px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.heart{
+    border: none;
+    color: rgb(182, 182, 182);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.meal-body .heart.active{
+    color: red;
+    border: none;
+    background-color: transparent;
+}
+
+
+.popup-container{
+    /* the fourth term in rgb is for the transparency */
+    background-color: rgb(178, 178, 178,0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.popup-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 2rem;
+    border: 5px;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.meal-info h1{
+    text-align: center;
+} 
+
+.close-popup{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+
+}
+
